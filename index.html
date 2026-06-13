@@ -888,6 +888,9 @@
       section { padding: 60px 20px; }
       .footer-top { grid-template-columns: 1fr; }
       .stats-numbers { grid-template-columns: 1fr 1fr; }
+      .stat-item { padding: 32px 16px; }
+      .stat-value { font-size: 36px; letter-spacing: -1px; }
+      .stat-label { font-size: 12px; }
       .metrics { padding: 0 20px 60px; }
       .process-step { grid-template-columns: 1fr; gap: 8px; }
     }
@@ -993,21 +996,21 @@
           <div class="team-avatar av1">N</div>
           <div class="team-info">
             <span class="team-name">Nida</span>
-            <span class="team-role">Founder &amp; CEO</span>
+            <span class="team-role">Founder &amp; CMO</span>
           </div>
         </div>
         <div class="team-member">
-          <div class="team-avatar av2">S</div>
+          <div class="team-avatar av2">I</div>
           <div class="team-info">
-            <span class="team-name">Sofia</span>
-            <span class="team-role">Head of SEO</span>
+            <span class="team-name">Isha</span>
+            <span class="team-role">Paid Media Manager</span>
           </div>
         </div>
         <div class="team-member">
-          <div class="team-avatar av3">A</div>
+          <div class="team-avatar av3">R</div>
           <div class="team-info">
-            <span class="team-name">Aisha</span>
-            <span class="team-role">Creative Director</span>
+            <span class="team-name">Rachel</span>
+            <span class="team-role">Social Media Manager</span>
           </div>
         </div>
         <div class="team-member">
@@ -1232,7 +1235,8 @@
       <form action="https://formsubmit.co/contact@cluvo.ca" method="POST">
         <input type="hidden" name="_subject" value="New Strategy Call Request – Cluvo Marketing" />
         <input type="hidden" name="_next" value="https://cluvo.ca?submitted=true" />
-        <input type="hidden" name="_captcha" value="false" />
+        <input type="text" name="_honey" style="display:none" />
+        <input type="hidden" name="_captcha" value="true" />
         <div class="form-row">
           <div class="form-group">
             <input type="text" name="first_name" placeholder="First Name" required />
@@ -1271,6 +1275,22 @@
     </div>
   </div>
 </div>
+
+<!-- THANK YOU MODAL -->
+<div id="thankyou-overlay" style="display:none;position:fixed;inset:0;background:rgba(7,7,10,0.85);z-index:9999;align-items:center;justify-content:center;">
+  <div style="background:#16161E;border:1px solid rgba(124,92,252,0.3);border-radius:20px;padding:52px 48px;max-width:480px;width:90%;text-align:center;position:relative;">
+    <div style="width:64px;height:64px;background:linear-gradient(135deg,#7C5CFC,#EC4899);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 24px;font-size:28px;">✓</div>
+    <h2 style="font-size:26px;font-weight:800;color:#F1F0F5;margin-bottom:12px;">Thank you!</h2>
+    <p style="color:#A09CB5;font-size:16px;line-height:1.7;margin-bottom:28px;">We've received your request and will be in touch within <strong style="color:#F1F0F5;">24–48 hours</strong> to book your free strategy call.</p>
+    <button onclick="document.getElementById('thankyou-overlay').style.display='none'" style="background:linear-gradient(135deg,#7C5CFC,#EC4899);color:#fff;border:none;padding:14px 32px;border-radius:10px;font-size:15px;font-weight:700;cursor:pointer;">Back to Site</button>
+  </div>
+</div>
+<script>
+  if (window.location.search.includes('submitted=true')) {
+    document.getElementById('thankyou-overlay').style.display = 'flex';
+    history.replaceState(null, '', window.location.pathname);
+  }
+</script>
 
 <!-- FOOTER -->
 <footer>
@@ -1313,16 +1333,15 @@
         <h4>Get in Touch</h4>
         <ul>
           <li><a href="mailto:marketing@cluvo.ca">marketing@cluvo.ca</a></li>
-          <li style="color:var(--text3);font-size:13px">📅 Free calls Mon–Fri<br>9am–6pm GMT</li>
+          <li style="color:var(--text3);font-size:13px">📅 Free calls Mon–Fri<br>9am–9pm EST</li>
         </ul>
       </div>
     </div>
     <div class="footer-bottom">
       <p>© 2026 Cluvo Marketing Ltd. All rights reserved.</p>
       <div class="footer-legal">
-        <a href="#">Privacy Policy</a>
-        <a href="#">Terms of Service</a>
-        <a href="#">Cookie Policy</a>
+        <a href="/privacy-policy.html">Privacy Policy</a>
+        <a href="/cookie-policy.html">Cookie Policy</a>
       </div>
     </div>
   </div>
