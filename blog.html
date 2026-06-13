@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-42MF43VWC0"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-42MF43VWC0');
+  </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blog | Marketing Insights & Strategy | Cluvo Marketing</title>
+  <meta name="description" content="Marketing insights, strategy guides, and thought leadership from the Cluvo team. Real advice for SMBs and startups who want to grow faster." />
+  <link rel="canonical" href="https://cluvo.ca/blog.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://cluvo.ca/blog.html" />
+  <meta property="og:title" content="Blog | Marketing Insights & Strategy | Cluvo Marketing" />
+  <meta property="og:description" content="Marketing insights, strategy guides, and thought leadership from the Cluvo team. Real advice for SMBs and startups." />
+  <meta property="og:image" content="https://cluvo.ca/Cluvo_LinkedIn_Banner.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="robots" content="index, follow" />
+  <meta name="author" content="Cluvo Marketing" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg: #07070A; --bg2: #16161E; --accent: #7C5CFC; --pink: #EC4899;
+      --cyan: #06B6D4; --amber: #F59E0B; --green: #10B981;
+      --text: #F1F0F5; --text2: #C8C5D8; --text3: #A09CB5;
+      --border: rgba(255,255,255,0.07);
+      --radius: 16px;
+    }
+    body { background: var(--bg); color: var(--text2); font-family: 'Inter', -apple-system, sans-serif; line-height: 1.7; }
+
+    /* NAV */
+    nav { position: sticky; top: 0; z-index: 100; background: rgba(7,7,10,0.95); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); padding: 0 48px; height: 68px; display: flex; align-items: center; justify-content: space-between; }
+    .nav-logo { font-size: 20px; font-weight: 800; color: var(--text); text-decoration: none; display: flex; align-items: center; gap: 8px; }
+    .logo-icon { width: 32px; height: 32px; background: linear-gradient(135deg, var(--accent), var(--pink)); border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 14px; font-weight: 900; color: #fff; }
+    .nav-links { display: flex; gap: 32px; list-style: none; }
+    .nav-links a { color: var(--text2); text-decoration: none; font-size: 14px; font-weight: 500; transition: color 0.2s; }
+    .nav-links a:hover, .nav-links a.active { color: var(--text); }
+    .nav-cta { background: linear-gradient(135deg, var(--accent), var(--pink)); color: #fff; padding: 10px 22px; border-radius: 50px; text-decoration: none; font-size: 14px; font-weight: 600; transition: opacity 0.2s; }
+    .nav-cta:hover { opacity: 0.88; }
+
+    /* HERO */
+    .blog-hero { max-width: 1100px; margin: 0 auto; padding: 80px 32px 56px; text-align: center; }
+    .section-tag { display: inline-block; background: rgba(124,92,252,0.15); color: var(--accent); font-size: 12px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; padding: 6px 16px; border-radius: 20px; margin-bottom: 20px; }
+    .blog-hero h1 { font-size: clamp(36px, 6vw, 56px); font-weight: 800; color: var(--text); letter-spacing: -2px; margin-bottom: 16px; }
+    .blog-hero p { font-size: 18px; color: var(--text2); max-width: 540px; margin: 0 auto; }
+
+    /* FEATURED ARTICLE */
+    .featured-wrap { max-width: 1100px; margin: 0 auto; padding: 0 32px 64px; }
+    .featured-label { font-size: 12px; font-weight: 700; color: var(--accent); text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 20px; }
+    .featured-card { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; background: var(--bg2); border: 1px solid var(--border); border-radius: 24px; padding: 48px; align-items: center; position: relative; overflow: hidden; transition: border-color 0.2s, transform 0.2s; }
+    .featured-card:hover { border-color: rgba(124,92,252,0.35); transform: translateY(-3px); }
+    .featured-card::before { content: ''; position: absolute; top: -60px; right: -60px; width: 300px; height: 300px; background: radial-gradient(circle, rgba(124,92,252,0.12), transparent 70%); pointer-events: none; }
+    .featured-visual { background: linear-gradient(135deg, rgba(124,92,252,0.2), rgba(236,72,153,0.15)); border-radius: 16px; aspect-ratio: 16/9; display: flex; align-items: center; justify-content: center; font-size: 64px; }
+    .featured-content { }
+    .featured-tags { display: flex; gap: 10px; margin-bottom: 16px; flex-wrap: wrap; }
+    .tag { display: inline-block; padding: 4px 12px; border-radius: 20px; font-size: 12px; font-weight: 600; }
+    .tag-purple { background: rgba(124,92,252,0.15); color: var(--accent); }
+    .tag-pink { background: rgba(236,72,153,0.15); color: var(--pink); }
+    .featured-content h2 { font-size: clamp(20px, 3vw, 28px); font-weight: 800; color: var(--text); margin-bottom: 14px; letter-spacing: -0.5px; line-height: 1.25; }
+    .featured-content p { color: var(--text2); font-size: 15px; line-height: 1.75; margin-bottom: 24px; }
+    .article-meta-row { display: flex; align-items: center; gap: 16px; font-size: 13px; color: var(--text3); margin-bottom: 24px; flex-wrap: wrap; }
+    .read-link { display: inline-flex; align-items: center; gap: 8px; color: var(--accent); font-weight: 600; font-size: 14px; text-decoration: none; transition: gap 0.2s; }
+    .read-link:hover { gap: 12px; }
+
+    /* ARTICLES GRID */
+    .articles-section { max-width: 1100px; margin: 0 auto; padding: 0 32px 100px; }
+    .articles-section h2 { font-size: 22px; font-weight: 700; color: var(--text); margin-bottom: 32px; }
+    .articles-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+    .article-card { background: var(--bg2); border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; transition: border-color 0.2s, transform 0.2s; display: flex; flex-direction: column; }
+    .article-card:hover { border-color: rgba(124,92,252,0.3); transform: translateY(-3px); }
+    .card-visual { height: 140px; display: flex; align-items: center; justify-content: center; font-size: 42px; }
+    .card-visual.v1 { background: linear-gradient(135deg, rgba(124,92,252,0.2), rgba(6,182,212,0.1)); }
+    .card-visual.v2 { background: linear-gradient(135deg, rgba(236,72,153,0.15), rgba(245,158,11,0.1)); }
+    .card-visual.v3 { background: linear-gradient(135deg, rgba(16,185,129,0.15), rgba(6,182,212,0.1)); }
+    .card-body { padding: 24px; flex: 1; display: flex; flex-direction: column; }
+    .card-tag { font-size: 11px; font-weight: 700; color: var(--accent); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 10px; }
+    .card-body h3 { font-size: 16px; font-weight: 700; color: var(--text); margin-bottom: 10px; line-height: 1.4; }
+    .card-body p { font-size: 13px; color: var(--text2); line-height: 1.65; margin-bottom: 16px; flex: 1; }
+    .card-footer { display: flex; justify-content: space-between; align-items: center; padding-top: 14px; border-top: 1px solid var(--border); font-size: 12px; color: var(--text3); }
+    .card-footer a { color: var(--accent); font-weight: 600; text-decoration: none; font-size: 13px; }
+
+    /* COMING SOON CARD */
+    .coming-soon { opacity: 0.5; pointer-events: none; }
+    .coming-badge { font-size: 11px; font-weight: 700; color: var(--text3); background: rgba(255,255,255,0.05); padding: 3px 10px; border-radius: 20px; }
+
+    /* NEWSLETTER */
+    .newsletter { max-width: 1100px; margin: 0 auto; padding: 0 32px 100px; }
+    .newsletter-inner { background: linear-gradient(135deg, rgba(124,92,252,0.1), rgba(236,72,153,0.08)); border: 1px solid rgba(124,92,252,0.2); border-radius: 24px; padding: 56px 48px; text-align: center; }
+    .newsletter-inner h2 { font-size: 30px; font-weight: 800; color: var(--text); margin-bottom: 10px; letter-spacing: -0.5px; }
+    .newsletter-inner p { color: var(--text2); margin-bottom: 28px; font-size: 16px; }
+    .newsletter-form { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+    .newsletter-form input { background: rgba(255,255,255,0.06); border: 1px solid var(--border); color: var(--text); padding: 13px 20px; border-radius: 50px; font-size: 15px; font-family: inherit; width: 300px; outline: none; transition: border-color 0.2s; }
+    .newsletter-form input:focus { border-color: rgba(124,92,252,0.5); }
+    .newsletter-form input::placeholder { color: var(--text3); }
+    .newsletter-form button { background: linear-gradient(135deg, var(--accent), var(--pink)); color: #fff; border: none; padding: 13px 28px; border-radius: 50px; font-size: 15px; font-weight: 700; cursor: pointer; font-family: inherit; }
+
+    /* FOOTER */
+    footer { border-top: 1px solid var(--border); padding: 32px 48px; display: flex; justify-content: space-between; align-items: center; font-size: 13px; color: var(--text3); flex-wrap: wrap; gap: 16px; }
+    footer a { color: var(--text3); text-decoration: none; margin-left: 16px; }
+    footer a:hover { color: var(--text); }
+
+    @media (max-width: 900px) {
+      nav { padding: 0 24px; }
+      .nav-links { display: none; }
+      .featured-card { grid-template-columns: 1fr; gap: 24px; }
+      .featured-visual { aspect-ratio: 2/1; }
+      .articles-grid { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 600px) {
+      nav { padding: 0 16px; }
+      .blog-hero, .featured-wrap, .articles-section, .newsletter { padding-left: 16px; padding-right: 16px; }
+      .featured-card { padding: 28px 20px; }
+      .articles-grid { grid-template-columns: 1fr; }
+      .newsletter-inner { padding: 36px 20px; }
+      .newsletter-form input { width: 100%; }
+      footer { flex-direction: column; text-align: center; padding: 24px 16px; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="/" class="nav-logo"><span class="logo-icon">C</span>Cluvo.</a>
+  <ul class="nav-links">
+    <li><a href="/#services">Services</a></li>
+    <li><a href="/#stats">Results</a></li>
+    <li><a href="/work.html">Our Work</a></li>
+    <li><a href="/blog.html" class="active">Blog</a></li>
+  </ul>
+  <a href="/#contact" class="nav-cta">Free Strategy Call</a>
+</nav>
+
+<!-- HERO -->
+<div class="blog-hero">
+  <span class="section-tag">Cluvo Blog</span>
+  <h1>Marketing Insights<br>That Actually Matter</h1>
+  <p>Strategy, thought leadership, and real-world advice from the Cluvo team — written for SMBs and startups who want to grow smarter.</p>
+</div>
+
+<!-- FEATURED -->
+<div class="featured-wrap">
+  <div class="featured-label">⭐ Featured Article</div>
+  <a href="/blog-thought-leadership-adaptability.html" style="text-decoration:none;">
+    <div class="featured-card">
+      <div class="featured-visual">💡</div>
+      <div class="featured-content">
+        <div class="featured-tags">
+          <span class="tag tag-purple">Thought Leadership</span>
+          <span class="tag tag-pink">Strategy</span>
+        </div>
+        <h2>Why Thought Leadership and Adaptability Are the New Currency of Modern Marketing</h2>
+        <div class="article-meta-row">
+          <span>By Nida, Founder & CMO</span>
+          <span>·</span>
+          <span>June 13, 2026</span>
+          <span>·</span>
+          <span>8 min read</span>
+        </div>
+        <p>71% of B2B buyers say thought leadership is more effective than conventional marketing. Learn why adaptability and authority have become the two most powerful growth levers available to any brand — and how to use both.</p>
+        <span class="read-link">Read article →</span>
+      </div>
+    </div>
+  </a>
+</div>
+
+<!-- MORE ARTICLES -->
+<div class="articles-section">
+  <h2>More from the Blog</h2>
+  <div class="articles-grid">
+
+    <div class="article-card coming-soon">
+      <div class="card-visual v1">📈</div>
+      <div class="card-body">
+        <div class="card-tag">Paid Media</div>
+        <h3>How to Get the Most Out of Meta Ads in 2026 Without Burning Budget</h3>
+        <p>The platform has changed. Your strategy should too. A practical guide to Meta Ads for lean marketing teams.</p>
+        <div class="card-footer">
+          <span>Coming soon <span class="coming-badge">Soon</span></span>
+        </div>
+      </div>
+    </div>
+
+    <div class="article-card coming-soon">
+      <div class="card-visual v2">🤖</div>
+      <div class="card-body">
+        <div class="card-tag">AI & Tech</div>
+        <h3>Custom AI Agents for Marketing: What They Are and Why Your Brand Needs One</h3>
+        <p>From lead qualification to content automation — here's how AI agents are transforming what small marketing teams can achieve.</p>
+        <div class="card-footer">
+          <span>Coming soon <span class="coming-badge">Soon</span></span>
+        </div>
+      </div>
+    </div>
+
+    <div class="article-card coming-soon">
+      <div class="card-visual v3">🎯</div>
+      <div class="card-body">
+        <div class="card-tag">Branding</div>
+        <h3>Positioning Is the Most Underrated Growth Lever for Startups</h3>
+        <p>Most startups skip brand positioning. The ones that don't consistently outperform on every downstream metric that matters.</p>
+        <div class="card-footer">
+          <span>Coming soon <span class="coming-badge">Soon</span></span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- NEWSLETTER -->
+<div class="newsletter">
+  <div class="newsletter-inner">
+    <h2>Get Insights in Your Inbox</h2>
+    <p>No fluff, no filler. Just sharp marketing strategy delivered to you when it's worth reading.</p>
+    <form class="newsletter-form" action="https://formsubmit.co/contact@cluvo.ca" method="POST">
+      <input type="hidden" name="_subject" value="Blog Newsletter Sign-Up" />
+      <input type="hidden" name="_captcha" value="true" />
+      <input type="text" name="_honey" style="display:none" />
+      <input type="email" name="email" placeholder="Your email address" required />
+      <button type="submit">Subscribe →</button>
+    </form>
+  </div>
+</div>
+
+<footer>
+  <span>© 2026 Cluvo Marketing Ltd. All rights reserved.</span>
+  <div>
+    <a href="/work.html">Our Work</a>
+    <a href="/privacy-policy.html">Privacy Policy</a>
+    <a href="/cookie-policy.html">Cookie Policy</a>
+  </div>
+</footer>
+
+</body>
+</html>
