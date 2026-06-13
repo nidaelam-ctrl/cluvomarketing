@@ -880,7 +880,9 @@
     @media (max-width: 900px) {
       nav { padding: 16px 24px; }
       .nav-links { display: none; }
+      .nav-cta { padding: 10px 18px; font-size: 14px; }
       .hero { padding: 120px 24px 80px; }
+      .hero h1 { font-size: clamp(36px, 8vw, 64px); }
       section { padding: 72px 24px; }
       .about-grid, .values-grid, .services-grid, .testimonials-grid { grid-template-columns: 1fr; }
       .stats-numbers { grid-template-columns: repeat(2,1fr); }
@@ -888,19 +890,41 @@
       .footer-top { grid-template-columns: 1fr 1fr; }
       h1 { letter-spacing: -2px; }
       h2 { letter-spacing: -1px; }
+      .team-grid { grid-template-columns: repeat(2, 1fr); }
+      .badges { flex-wrap: wrap; gap: 10px; }
+      .process-step { gap: 16px; }
     }
 
     @media (max-width: 600px) {
-      nav { padding: 14px 20px; }
-      .hero { padding: 110px 20px 60px; }
-      section { padding: 60px 20px; }
-      .footer-top { grid-template-columns: 1fr; }
+      nav { padding: 14px 16px; }
+      .nav-cta { padding: 9px 14px; font-size: 13px; }
+      .hero { padding: 100px 16px 60px; }
+      .hero h1 { font-size: clamp(30px, 9vw, 48px); letter-spacing: -1.5px; }
+      .hero-sub { font-size: 15px; }
+      .hero-btns { flex-direction: column; align-items: stretch; gap: 12px; }
+      .hero-btns a { text-align: center; justify-content: center; }
+      .btn-primary, .btn-secondary { padding: 14px 20px; font-size: 15px; }
+      section { padding: 56px 16px; }
+      h2 { font-size: clamp(24px, 7vw, 36px); }
+      .footer-top { grid-template-columns: 1fr; gap: 32px; }
+      .footer-legal { flex-direction: column; gap: 12px; align-items: center; text-align: center; }
       .stats-numbers { grid-template-columns: 1fr 1fr; }
-      .stat-item { padding: 32px 16px; }
-      .stat-value { font-size: 36px; letter-spacing: -1px; }
+      .stat-item { padding: 28px 12px; }
+      .stat-value { font-size: 34px; letter-spacing: -1px; }
       .stat-label { font-size: 12px; }
-      .metrics { padding: 0 20px 60px; }
+      .metrics { padding: 0 16px 56px; flex-direction: column; align-items: stretch; }
+      .metric-card { max-width: 100%; min-width: unset; }
       .process-step { grid-template-columns: 1fr; gap: 8px; }
+      .team-grid { grid-template-columns: repeat(2, 1fr); gap: 16px; }
+      .proof-strip { gap: 16px; }
+      .proof-divider { display: none; }
+      .services-grid { grid-template-columns: 1fr; }
+      .testimonials-grid { grid-template-columns: 1fr; }
+      .values-grid { grid-template-columns: 1fr; }
+      .ticker-track { animation-duration: 20s; }
+      form input, form select, form textarea { font-size: 16px; } /* prevents iOS zoom */
+      .badges { justify-content: center; }
+      .badge { font-size: 12px; padding: 6px 12px; }
     }
   </style>
 </head>
@@ -1208,7 +1232,7 @@
         <div class="author-avatar av1">SM</div>
         <div>
           <div class="author-name">Sarah Mitchell</div>
-          <div class="author-title">Founder, GreenBloom Co.</div>
+          <div class="author-title">Founder</div>
         </div>
       </div>
     </div>
@@ -1219,7 +1243,7 @@
         <div class="author-avatar av4">JO</div>
         <div>
           <div class="author-name">James Okafor</div>
-          <div class="author-title">CEO, TechLaunch SaaS</div>
+          <div class="author-title">CEO</div>
         </div>
       </div>
     </div>
@@ -1230,7 +1254,7 @@
         <div class="author-avatar av2">PS</div>
         <div>
           <div class="author-name">Priya Sharma</div>
-          <div class="author-title">Marketing Director, Velvet Eats</div>
+          <div class="author-title">Marketing Director</div>
         </div>
       </div>
     </div>
