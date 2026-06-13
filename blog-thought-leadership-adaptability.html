@@ -121,13 +121,27 @@
     footer a { color: var(--text3); text-decoration: none; margin-left: 16px; }
     footer a:hover { color: var(--text); }
 
+    @media (max-width: 900px) {
+      nav { padding: 0 24px; }
+      .nav-links { display: none; }
+      .nav-cta { padding: 9px 16px; font-size: 13px; }
+    }
     @media (max-width: 600px) {
       nav { padding: 0 16px; }
-      .nav-links { display: none; }
-      .article-hero, .article-body { padding-left: 16px; padding-right: 16px; }
-      .article-cta { padding: 36px 20px; }
-      .stat-block { padding: 20px; }
-      footer { flex-direction: column; text-align: center; padding: 24px 16px; }
+      .article-hero { padding: 48px 16px 32px; }
+      .article-body { padding: 40px 16px 80px; }
+      .article-hero h1 { font-size: clamp(24px, 8vw, 36px); letter-spacing: -1px; }
+      .article-hero .intro { font-size: 16px; padding-left: 14px; }
+      .article-cta { padding: 32px 16px; }
+      .article-cta h3 { font-size: 22px; }
+      .stat-block { padding: 20px 16px; }
+      .stat-block .stat-num { font-size: 38px; }
+      blockquote { padding: 16px 20px; }
+      blockquote p { font-size: 16px; }
+      .callout { padding: 20px 16px; }
+      footer { flex-direction: column; text-align: center; padding: 24px 16px; gap: 12px; }
+      footer a { margin-left: 0; margin: 0 8px; }
+      form input, form select, form textarea { font-size: 16px; }
     }
   </style>
 </head>
