@@ -747,9 +747,17 @@
       letter-spacing: -0.5px;
     }
 
-    .form-group { margin-bottom: 16px; }
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
 
-    .form-group input {
+    .form-group { margin-bottom: 12px; }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
       width: 100%;
       background: var(--bg3);
       border: 1px solid var(--border);
@@ -760,9 +768,17 @@
       font-family: inherit;
       outline: none;
       transition: border-color 0.2s;
+      appearance: none;
     }
-    .form-group input:focus { border-color: var(--accent); }
-    .form-group input::placeholder { color: var(--text3); }
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus { border-color: var(--accent); }
+    .form-group input::placeholder,
+    .form-group textarea::placeholder { color: var(--text3); }
+    .form-group select { cursor: pointer; }
+    .form-group select option { background: var(--bg3); color: var(--text); }
+    .form-group select option[disabled] { color: var(--text3); }
+    .form-group textarea { resize: vertical; min-height: 110px; line-height: 1.6; }
 
     .form-submit {
       width: 100%;
@@ -883,7 +899,7 @@
 <nav>
   <a href="#" class="nav-logo">
     <span class="logo-icon">C</span>
-    cluvo.
+    Cluvo.
   </a>
   <ul class="nav-links">
     <li><a href="#services">Services</a></li>
@@ -1213,15 +1229,41 @@
     </div>
     <div class="contact-form-box">
       <h3>Book Your Free Call</h3>
-      <form onsubmit="event.preventDefault(); this.innerHTML='<p style=\'color:var(--accent2);font-size:16px;font-weight:600;text-align:center;padding:40px 0\'>✓ Thanks! We\'ll be in touch shortly.</p>'">
-        <div class="form-group">
-          <input type="text" placeholder="Your Name" required />
+      <form action="https://formsubmit.co/nida@cluvo.ca" method="POST">
+        <input type="hidden" name="_subject" value="New Strategy Call Request – Cluvo Marketing" />
+        <input type="hidden" name="_next" value="https://cluvo.ca?submitted=true" />
+        <input type="hidden" name="_captcha" value="false" />
+        <div class="form-row">
+          <div class="form-group">
+            <input type="text" name="first_name" placeholder="First Name" required />
+          </div>
+          <div class="form-group">
+            <input type="text" name="last_name" placeholder="Last Name" required />
+          </div>
         </div>
         <div class="form-group">
-          <input type="email" placeholder="Email Address" required />
+          <input type="email" name="email" placeholder="Email Address" required />
         </div>
         <div class="form-group">
-          <input type="text" placeholder="Company / Website" />
+          <input type="tel" name="phone" placeholder="Phone Number (optional)" />
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <input type="text" name="company" placeholder="Company / Website" />
+          </div>
+          <div class="form-group">
+            <select name="company_size">
+              <option value="" disabled selected>Company Size</option>
+              <option value="1">Just me</option>
+              <option value="2-10">2–10 employees</option>
+              <option value="11-50">11–50 employees</option>
+              <option value="51-200">51–200 employees</option>
+              <option value="200+">200+ employees</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group">
+          <textarea name="note" placeholder="Anything you'd like to add? (optional)" rows="4"></textarea>
         </div>
         <button type="submit" class="form-submit">Book My Free Strategy Call</button>
       </form>
@@ -1237,13 +1279,13 @@
       <div class="footer-brand">
         <a href="#" class="nav-logo">
           <span class="logo-icon">C</span>
-          cluvo.
+          Cluvo.
         </a>
         <p>Digital marketing that actually moves the needle. Built for SMBs and startups who want to grow fast and smart.</p>
         <div class="footer-socials">
-          <a href="#" class="social-btn">𝕏</a>
-          <a href="#" class="social-btn">in</a>
-          <a href="#" class="social-btn">ig</a>
+          <a href="#" class="social-btn" target="_blank" rel="noopener">𝕏</a>
+          <a href="https://www.linkedin.com/company/cluvo-marketing/" class="social-btn" target="_blank" rel="noopener">in</a>
+          <a href="https://www.instagram.com/cluvomarketing" class="social-btn" target="_blank" rel="noopener">ig</a>
         </div>
       </div>
       <div class="footer-col">
@@ -1270,8 +1312,7 @@
       <div class="footer-col">
         <h4>Get in Touch</h4>
         <ul>
-          <li><a href="mailto:hello@cluvomarketing.com">hello@cluvomarketing.com</a></li>
-          <li><a href="tel:+442012345678">+44 20 1234 5678</a></li>
+          <li><a href="mailto:marketing@cluvo.ca">marketing@cluvo.ca</a></li>
           <li style="color:var(--text3);font-size:13px">📅 Free calls Mon–Fri<br>9am–6pm GMT</li>
         </ul>
       </div>
