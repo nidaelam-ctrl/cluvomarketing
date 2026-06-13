@@ -1316,6 +1316,13 @@
   if (window.location.search.includes('submitted=true')) {
     document.getElementById('thankyou-overlay').style.display = 'flex';
     history.replaceState(null, '', window.location.pathname);
+    // Fire GA4 conversion event
+    if (typeof gtag !== 'undefined') {
+      gtag('event', 'generate_lead', {
+        event_category: 'Contact Form',
+        event_label: 'Form Submission'
+      });
+    }
   }
 </script>
 
